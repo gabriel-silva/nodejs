@@ -5,8 +5,22 @@
 			<title>Notícias</title>
 		</head>
 	<body>
-
 		<h1>Notícias</h1>
+		<table>
+			<tr>
+				<td>Id</td>
+				<td>Titulo</td>
+				<td>Noticia</td>
 
+				<% noticias.forEach((element, key) =>{ %>
+					<tr>
+						<td><%= element.id_noticia %></td>
+						<td><%= element.titulo %></td>
+						<td><%= element.noticia%></td>
+					</tr>
+				<% }); %>
+
+			</tr>
+		</table>
 	</body>
 </html>
