@@ -1,6 +1,6 @@
 var mysql = require('mysql');
 
-module.exports = function () {
+var connMySQL = function () {
     return mysql.createConnection({
         host: 'localhost',
         user: 'root',
@@ -8,4 +8,8 @@ module.exports = function () {
         database: 'portal_noticias',
         socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock'
     });
+}
+
+module.exports = function () {
+    return connMySQL;
 }
