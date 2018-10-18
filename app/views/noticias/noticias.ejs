@@ -2,25 +2,25 @@
 	<html lang="pt-br">
 		<head>
 			<meta charset="utf-8"/>
-			<title>NotÃ­cias</title>
+			<title>Notícias</title>
 		</head>
 	<body>
-		<h1>NotÃ­cias</h1>
+
+		<h1>Notícias</h1>
+
 		<table>
 			<tr>
-				<td>Id</td>
+				<td>ID</td>
 				<td>Titulo</td>
-				<td>Noticia</td>
-
-				<% noticias.forEach((element, key) =>{ %>
-					<tr>
-						<td><%= element.id_noticia %></td>
-						<td><%= element.titulo %></td>
-						<td><%= element.noticia%></td>
-					</tr>
-				<% }); %>
-
 			</tr>
+
+			<% for(var i=0; i < noticias.length; i++) { %>
+				<tr>
+					<td><%= noticias[i].id_noticia %></td>
+					<td><%= noticias[i].titulo %></td>
+				</tr>
+			<% } %>
 		</table>
+
 	</body>
 </html>
